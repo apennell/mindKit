@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Sign In</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+  </head>
+  <body ng-app="mindkit">
+
+    <!-- Landing/Login Page -->
+    <ion-pane>
+      <ion-content padding="true">
+      <center><h1 class="title">MindKit</h1></center>
+      <div class="spacer" style="height: 40px;"></div>
+      <center><h4>Ready to change your mind?</h4></center>
+      <div class="list list-insest">
+        <label class="item item-input">
+          <input type="text" placeholder="First Name">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Last Name">
+        </label>
+        <button class="button button-block button-royal">
+          Sign In
+        </button>
+        <center>
+          <button class="button button-clear button-calm">
+            Sign Up
+          </button>
+          <button class="button button-clear button-calm">
+            About MindKit
+          </button>
+        </center>
+      </div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
