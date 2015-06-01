@@ -20,4 +20,4 @@
 //   });
 // })
 
-angular.module('mindkit', ['ionic'])
+var app = angular.module('mindKit', ['ionic'])

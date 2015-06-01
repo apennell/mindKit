@@ -22,33 +22,87 @@
     <script src="cordova.js"></script>
 
   </head>
-  <body ng-app="mindkit">
+  <body ng-app="mindKit">
 
     <!-- Landing/Login Page -->
-    <ion-pane>
+<!--     <ion-pane>
       <ion-content padding="true">
-      <center><h1 class="title">MindKit</h1></center>
-      <div class="spacer" style="height: 40px;"></div>
-      <center><h4>Ready to change your mind?</h4></center>
-      <div class="list list-insest">
-        <label class="item item-input">
-          <input type="text" placeholder="First Name">
-        </label>
-        <label class="item item-input">
-          <input type="text" placeholder="Last Name">
-        </label>
-        <button class="button button-block button-royal">
-          Sign In
-        </button>
-        <center>
-          <button class="button button-clear button-calm">
+        <center><h1 class="title">MindKit</h1></center>
+        <div class="spacer" style="height: 40px;"></div>
+        <center><h4>Ready to change your mind?</h4></center>
+        <div class="list list-insest">
+          <label class="item item-input">
+            <input type="text" placeholder="Email">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Password">
+          </label>
+          <button class="button button-block button-royal">
+            Sign In
+          </button>
+          <center>
+            <button class="button button-clear button-balanced">
+              Sign Up
+            </button>
+            <button class="button button-clear button-balanced">
+              About MindKit
+            </button>
+          </center>
+        </div>
+      </ion-content>
+    </ion-pane> -->
+
+    <!-- Sign up page -->
+<!--     <ion-pane>
+      <ion-content padding="true">
+        <center><h1 class="title">MindKit</h1></center>
+        <div class="spacer" style="height: 40px;"></div>
+        <center><h4>Ready to change your mind?</h4></center>
+        <div class="list list-insest">
+          <label class="item item-input">
+            <input type="text" placeholder="First Name">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Username">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Email">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Password">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Confirm Password">
+          </label>
+          <button class="button button-block button-royal">
             Sign Up
           </button>
-          <button class="button button-clear button-calm">
-            About MindKit
+          <button class="button button-clear button-balanced">
+            <i class="icon ion-arrow-left-c"></i>
+            &nbsp; Back
           </button>
-        </center>
-      </div>
+        </div>
+      </ion-content>
+    </ion-pane> -->
+
+    <!-- About Page -->
+    <ion-pane>
+      <ion-content padding="true">
+        <div class="bar bar-header">
+          <a class="button icon-left ion-chevron-left button-clear button-balanced">&nbsp; Back</a>
+          <div class="h1 title">About MindKit</div>
+        </div>
+        <div class="spacer" style="height: 40px;"></div>
+        <div class="card">
+          <div class="item item-text-wrap">
+            This is info about the MindKit app! It will tell you about how to use it. 
+          </div>
+        </div>
+        <div class="card">
+          <div class="item item-text-wrap">
+            This is info about the CBT! It will tell you about how it can help. 
+          </div>
+        </div>
       </ion-content>
     </ion-pane>
   </body>
