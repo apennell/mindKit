@@ -1,0 +1,254 @@
+<!-- New thought log (wizard template) -->
+<ion-view>
+
+  <ion-content>
+
+    <ion-slide-box ion-wizard>
+
+      <!-- First question - situation -->
+      <ion-slide ion-wizard-step>
+        <div class="bar bar-header">
+          <a class="button icon-left ion-arrow-left-c button-clear button-balanced" ui-sref="progress">&nbsp; Back</a>
+          <div class="h1 title">Thought Log</div>
+        </div>
+        <div class="spacer" style="height: 25px;"></div>
+        <div class="row">
+          <div class="col col-center">
+            <div class="list rounded">
+              <center><h4>What was the situation?</h4></center>
+              <div class="list list-inset">
+                <label class="item item-input">
+                  <textarea rows="20" placeholder="What happened? Where was I? Who was I with?"></textarea>
+                </label>
+              </div>
+              <button class="button button-block button-royal" ion-wizard-next>
+                Next &nbsp; <i class="icon ion-arrow-right-c"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- Second question - Emotions/feelings -->
+      <ion-slide ion-wizard-step>
+        <div class="bar bar-header">
+          <button class="button button-clear no-animation button-balanced" ion-wizard-previous><i class="icon ion-arrow-left-c"></i>&nbsp;Previous</button>
+          <div class="h1 title">Thought Log</div>
+        </div>
+        <div class="spacer" style="height: 25px;"></div>
+        <div class="row">
+          <div class="col col-center">
+            <div class="list rounded">
+              <center>
+                <h4>How did I feel?</h4>
+                <p>What emotions did I feel? <br> From 1 to 100%, how strong were they?</p>
+              </center>
+              <!-- list of emotions -->
+              <ion-list>
+                <!-- emotion 1 -->
+                <div class="list list-inset">
+                  <label class="item item-input">
+                    <input type="text" placeholder="Emotion">
+                  </label>
+                  <label class="item item-input">
+                    <input type="text" placeholder="Strength, 1-100">%&nbsp;
+                  </label>
+                </div>
+                <!-- emotion 2 -->
+                <div class="list list-inset">
+                  <label class="item item-input">
+                    <input type="text" placeholder="Emotion">
+                  </label>
+                  <label class="item item-input">
+                    <input type="text" placeholder="Strength, 1-100">%&nbsp;
+                  </label>
+                </div>
+                <!-- emotion 3 -->
+                <div class="list list-inset">
+                  <label class="item item-input">
+                    <input type="text" placeholder="Emotion">
+                  </label>
+                  <label class="item item-input">
+                    <input type="text" placeholder="Strength, 1-100">%&nbsp;
+                  </label>
+                </div>
+                <!-- emotion 4 -->
+                <!-- <div class="list list-inset">
+                  <label class="item item-input">
+                    <input type="text" placeholder="Emotion">
+                  </label>
+                  <label class="item item-input">
+                    <input type="text" placeholder="Strength, 1-100">%&nbsp;
+                  </label>
+                </div> -->
+                <!-- emotion 5 -->
+                <!-- <div class="list list-inset">
+                  <label class="item item-input">
+                    <input type="text" placeholder="Emotion">
+                  </label>
+                  <label class="item item-input">
+                    <input type="text" placeholder="Strength, 1-100">%&nbsp;
+                  </label>
+                </div> -->
+              </ion-list> 
+              <button class="button button-block button-royal" ion-wizard-next>
+                Next &nbsp; <i class="icon ion-arrow-right-c"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- Third question - ANT thoughts -->
+      <ion-slide ion-wizard-step>
+        <div class="bar bar-header">
+          <button class="button button-clear no-animation button-balanced" ion-wizard-previous><i class="icon ion-arrow-left-c"></i>&nbsp;Previous</button>
+          <div class="h1 title">Thought Log</div>
+        </div>
+        <div class="spacer" style="height: 25px;"></div>
+        <div class="row">
+          <div class="col col-center">
+            <div class="list rounded">
+              <center><h4>What were my thoughts?</h4></center>
+              <div class="list list-inset">
+                <label class="item item-input">
+                  <textarea rows="20" placeholder="What automatic negative thoughts did I have?"></textarea>
+                </label>
+              </div>
+              <button class="button button-block button-royal" ion-wizard-next>
+                Next &nbsp; <i class="icon ion-arrow-right-c"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- Fourth question - Supporting Evidence -->
+      <ion-slide ion-wizard-step>
+        <div class="bar bar-header">
+          <button class="button button-clear no-animation button-balanced" ion-wizard-previous><i class="icon ion-arrow-left-c"></i>&nbsp;Previous</button>
+          <div class="h1 title">Thought Log</div>
+        </div>
+        <div class="spacer" style="height: 25px;"></div>
+        <div class="row">
+          <div class="col col-center">
+            <div class="list rounded">
+              <center><h4>Supporting Evidence</h4></center>
+              <div class="list list-inset">
+                <label class="item item-input">
+                  <textarea rows="20" placeholder="What evidence do I have that supports these thoughts? What are the facts?"></textarea>
+                </label>
+              </div>
+              <button class="button button-block button-royal" ion-wizard-next>
+                Next &nbsp; <i class="icon ion-arrow-right-c"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- Fifth question - Supporting Evidence -->
+      <ion-slide ion-wizard-step>
+        <div class="bar bar-header">
+          <button class="button button-clear no-animation button-balanced" ion-wizard-previous><i class="icon ion-arrow-left-c"></i>&nbsp;Previous</button>
+          <div class="h1 title">Thought Log</div>
+        </div>
+        <div class="spacer" style="height: 25px;"></div>
+        <div class="row">
+          <div class="col col-center">
+            <div class="list rounded">
+              <center><h4>Contradicting Evidence</h4></center>
+              <div class="list list-inset">
+                <label class="item item-input">
+                  <textarea rows="20" placeholder="What evidence do I have that contradicts these thoughts? What are the facts?"></textarea>
+                </label>
+              </div>
+              <button class="button button-block button-royal" ion-wizard-next>
+                Next &nbsp; <i class="icon ion-arrow-right-c"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- Sixth question - Alternative thoughts -->
+      <ion-slide ion-wizard-step>
+        <div class="bar bar-header">
+          <button class="button button-clear no-animation button-balanced" ion-wizard-previous><i class="icon ion-arrow-left-c"></i>&nbsp;Previous</button>
+          <div class="h1 title">Thought Log</div>
+        </div>
+        <div class="spacer" style="height: 25px;"></div>
+        <div class="row">
+          <div class="col col-center">
+            <div class="list rounded">
+              <center><h4>Alternative Thoughts</h4></center>
+              <div class="list list-inset">
+                <label class="item item-input">
+                  <textarea rows="20" placeholder="What's a more realistic thought? What would someone else say? Is there another way of seeing it?"></textarea>
+                </label>
+              </div>
+              <button class="button button-block button-royal" ion-wizard-next>
+                Next &nbsp; <i class="icon ion-arrow-right-c"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- Seventh question - Re-evaluate -->
+      <ion-slide ion-wizard-step>
+        <div class="bar bar-header">
+          <button class="button button-clear no-animation button-balanced" ion-wizard-previous><i class="icon ion-arrow-left-c"></i>&nbsp;Previous</button>
+          <div class="h1 title">Thought Log</div>
+        </div>
+        <div class="spacer" style="height: 25px;"></div>
+        <div class="row">
+          <div class="col col-center">
+            <div class="list rounded">
+              <center><h4>How do I feel now?</h4></center>
+              <ion-list>
+                <!-- emotion 1 -->
+                <div class="list list-inset">
+                  [ emotion1a, amount % ]
+                  <label class="item item-input">
+                    <input type="text" placeholder="Strength now, 1-100">%
+                  </label>
+                </div>
+                <!-- emotion 2 -->
+                <div class="list list-inset">
+                  [ emotion2a, amount % ]
+                  <label class="item item-input">
+                    <input type="text" placeholder="Strength now, 1-100">%
+                  </label>
+                </div>
+                <!-- emotion 3 -->
+                <div class="list list-inset">
+                  [ emotion3a, amount % ]
+                  <label class="item item-input">
+                    <input type="text" placeholder="Strength now, 1-100">%
+                  </label>
+                </div>
+                <!-- emotion 4 -->
+                <div class="list list-inset">
+                  [ emotion4a, amount % ]
+                  <label class="item item-input">
+                    <input type="text" placeholder="Strength now, 1-100">%
+                  </label>
+                </div>
+                <!-- emotion 5 -->
+                <div class="list list-inset">
+                  [ emotion5a, amount % ]
+                  <label class="item item-input">
+                    <input type="text" placeholder="Strength now, 1-100">%
+                  </label>
+                </div>
+              </ion-list>
+              <a class="button button-block button-royal" ui-sref="showLog">Submit</a>
+            </div>
+          </div>
+        </div>
+        <div class="spacer" style="height: 25px;"></div>
+      </ion-slide>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,51 @@
+<!-- Progress/Main Page -->
+<ion-pane>
+  <ion-content padding="true">
+    <center><h1 class="title">MindKit</h1></center>
+    <div class="spacer" style="height: 20px;"></div>
+    <!-- container with button to new thought log entry -->
+    <div class="list">
+
+      <div class="item item-text-wrap">
+        <center>
+          <h4>Thought Log</h4>
+          <a class="button button-outline button-royal" ui-sref="newLog">New Entry</a>
+        </center>
+        <div class="spacer" style="height: 10px;"></div>
+      </div>
+      
+      <!-- container with chart showing improvement over time -->
+      <div class="item item-text-wrap">
+        <center>
+          <h4>My Progress</h4>
+          <br>[chart of improvement]
+        </center>
+        <div class="spacer" style="height: 10px;"></div>
+      </div>
+      
+      <!-- scrolling calendar display with icon links to thought logs, shown on the day they were entered -->
+      <div class="item item-text-wrap">
+        <center>
+          <h4>Thought Logs</h4>
+          <br>[display scrolling calendar with icons on each day linking to that thought log]
+          <br>
+          <h1><a ui-sref="showLog"><i class="ion-chatbubble"></i></a></h1>
+      </div>
+
+      <!-- split row container display number of thought log entries and average improvement -->
+      <div class="item item-text-wrap">
+        <center>
+          <h5>Thought Log Entries</h5>
+          <h1>13</h1>
+        </center>
+      </div>
+      <div class="item item-text-wrap">
+        <center>
+          <h5>Average Improvement</h5>
+          <h1>57%</h1>
+        </center>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-pane>
