@@ -1,1 +1,113 @@
 /* Empty. Add your own CSS if you like */
+
+/* buttons */
+.button-greentar-light {
+  background-color: white;
+  color: #94C255;
+}
+
+.button-greentar {
+  background-color: #94C255;
+  color: white;
+}
+
+.button-purpletar {
+  background-color: white;
+  color: #634A68;
+}
+
+.button-purpletar {
+  background-color: #634A68;
+  color: white;
+}
+
+.button-orangetar-light {
+  background-color: white;
+  color: #E38634;
+}
+
+.button-orangetar {
+  background-color: #E38634;
+  color: white;
+}
+
+.button-yellowtar-light {
+  background-color: white;
+  color: #EDCD4C;
+}
+
+.button-yellowtar {
+  background-color: #EDCD4C;
+  color: white;
+}
+
+.title-head {
+  background-color: #634A68;
+  color: white;
+}
+
+.title-head h1 {
+  color: white;
+}
+
+.landing-log {
+  background-color: #94C255;
+}
+
+.landing-log h4 {
+  color: white;
+  font-size: 18px;
+}
+
+.landing-progress {
+  background-color: #E38634;
+  color: white;
+}
+
+.landing-progress h4 {
+  color: white;
+  font-size: 18px;
+}
+
+.landing-thoughts {
+  background-color: #EDCD4C;
+  color: white;
+}
+
+.landing-thoughts h4 {
+  color: white;
+  font-size: 18px;
+}
+
+.icon-purpletar {
+  color: #634A68;
+}
+
+.landing-entries {
+  background-color: #634A68;
+}
+
+.landing-improvement {
+  background-color: #94C255;
+}
+
+.landing-improvement h1, .landing-entries h1 {
+  color: white;
+}
+
+.landing-improvement h5, .landing-entries h5 {
+  color: white;
+  font-size: 
+}
+
+.ion-wizard {
+  background-color: #94C255;
+}
+
+.h1 {
+  color: white;
+}
+
+h4 {
+  color: white;
+}
