@@ -22,7 +22,11 @@
 
 // var app = angular.module('mindKit', ['ionic', 'ionic.wizard'])
 
-angular.module('mindKit', ['ionic', 'ionic.wizard', 'mindKit.controllers', 'mindKit.services'])
+angular.module('mindKit', ['ionic', 'ionic.wizard', 'mindKit.controllers', 'mindKit.services', 'ngResource'])
+
+.factory('ThoughtLog', function($resource) {
+  return $resource('http://localhost:3000/logs');
+})
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

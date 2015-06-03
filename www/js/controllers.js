@@ -8,17 +8,31 @@ angular.module('mindKit.controllers', [])
 
 .controller('ProgressCtrl', function($scope) {})
 
-.controller('NewLogCtrl', function($scope, $http) {
-  $scope.log = {};
+// .controller('NewLogCtrl', function($scope, $http) {
+//   $scope.log = {};
 
+//   $scope.createLog = function() {
+//     $http.post("http://localhost:3000/logs", $scope.thoughtLog)
+//       .success(function(data) {
+//         console.log(data);
+        
+//       })
+//       .error(function(data) {
+//         console.log(data);
+//       })
+//   }
+// })
+
+.controller('NewLogCtrl', function($scope, ThoughtLog) {
+  // get all thought logs
+  $scope.thoughtLogs = ThoughtLog.query();
+
+  // form data for creating new thought log with ng-model
+  $scope.thoughtLog = {};
   $scope.createLog = function() {
-    $http.post("http://localhost:3000/logs", $scope.thoughtLog)
-      .success(function(data) {
-        console.log(data);
-      })
-      .error(function(data) {
-        console.log(data);
-      })
+    var thoughtLog = new ThoughtLog($scope.thoughtLog);
+    thoughtLog.$save();
+    console.log(thoughtLog);
   }
 })
 
