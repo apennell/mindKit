@@ -74,13 +74,13 @@ angular.module('mindKit', ['ionic', 'ionic.wizard', 'mindKit.controllers', 'mind
   .state('newLog', {
     url: '/new',
     templateUrl: 'templates/newLog.html',
-    controller: 'NewCtrl'
+    controller: 'NewLogCtrl'
   })
 
   .state('showLog', {
     url: '/show',
     templateUrl: 'templates/showLog.html',
-    controller: 'ShowCtrl'
+    controller: 'ShowLogCtrl'
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/dash');
