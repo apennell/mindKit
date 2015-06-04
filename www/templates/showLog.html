@@ -8,23 +8,33 @@
     <div class="spacer title-head" style="height: 40px;"></div>
     <!-- container with button to new thought log entry -->
     <div class="list title-head">
-
       <div class="item item-text-wrap">
         { Date }
         <br><br>
-
+        
         <h2><strong>You felt { x }% better after completing this thought log!</strong></h2>
         <br>
 
         <strong>Situation</strong><br>
         <p>
-          { Text from sitation attribute filled out in new thought log form }
+          {{ thoughtLogs[6].situation }}
         </p>
         <br>
 
         <strong>Feelings</strong><br>
         <p>
-          { Emotion1 } { x }% <i class="ion-arrow-graph-down-right"></i> { y }%
+          {{ thoughtLogs[6].emotion1 }}
+          <br>
+          {{ thoughtLogs[6].emotion2 }}
+          <br>
+          {{ thoughtLogs[6].emotion3 }}
+          <br>
+          {{ thoughtLogs[6].emotion4 }}
+          <br>
+          {{ thoughtLogs[6].emotion5 }}
+          <br>
+
+          <!-- { Emotion1 } { x }% <i class="ion-arrow-graph-down-right"></i> { y }%
           <br>
           { Emotion2 } { x }% <i class="ion-arrow-graph-down-right"></i> { y }%
           <br>
@@ -35,7 +45,7 @@
           { Emotion5 } { x }% <i class="ion-arrow-graph-down-right"></i> { y }%
           <br>
           <b>Sad</b> 93% <i class="ion-arrow-graph-down-right"></i> 27%
-        </p>
+        </p> -->
         <br>
 
         <strong>Thoughts</strong><br>

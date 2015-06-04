@@ -24,10 +24,6 @@
 
 angular.module('mindKit', ['ionic', 'ionic.wizard', 'mindKit.controllers', 'mindKit.services', 'ngResource'])
 
-.factory('ThoughtLog', function($resource) {
-  return $resource('http://localhost:3000/logs');
-})
-
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

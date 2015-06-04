@@ -8,59 +8,35 @@ angular.module('mindKit.controllers', [])
 
 .controller('ProgressCtrl', function($scope) {})
 
-// .controller('NewLogCtrl', function($scope, $http) {
-//   $scope.log = {};
-
-//   $scope.createLog = function() {
-//     $http.post("http://localhost:3000/logs", $scope.thoughtLog)
-//       .success(function(data) {
-//         console.log(data);
-        
-//       })
-//       .error(function(data) {
-//         console.log(data);
-//       })
-//   }
-// })
-
-.controller('NewLogCtrl', function($scope, ThoughtLog) {
+.controller('NewLogCtrl', function($scope, ThoughtLog, $http) {
   // get all thought logs
   $scope.thoughtLogs = ThoughtLog.query();
 
   // form data for creating new thought log with ng-model
-  $scope.thoughtLog = {};
+  $scope.thoughtLog = {situation: "", emotion1: "", emotion2: "", emotion3: "", emotion4: "", emotion5: ""};
   $scope.createLog = function() {
-    var thoughtLog = new ThoughtLog($scope.thoughtLog);
-    thoughtLog.$save();
-    console.log(thoughtLog);
+    console.log($scope.thoughtLog);
+    $http.post('http://localhost:3000/logs', $scope.thoughtLog).
+      success(function(data, status, config) {
+        console.log(data);
+      }).
+      error(function(data, status, config) {
+        console.log(data);
+      });
   }
 })
 
-.controller('ShowLogCtrl', function($scope) {})
+.controller('ShowLogCtrl', function($scope, $http) {
 
 
+  $http.get('http://localhost:3000/logs').
+    success(function(data, status, config) {
+      console.log(data);
+      $scope.thoughtLogs = data;
+    }).
+    error(function(data, status, config) {
+      console.log(data);
+    });
+})
 
-// .controller('ChatsCtrl', function($scope, Chats) {
-//   // With the new view caching in Ionic, Controllers are only called
-//   // when they are recreated or on app start, instead of every page change.
-//   // To listen for when this page is active (for example, to refresh data),
-//   // listen for the $ionicView.enter event:
-//   //
-//   //$scope.$on('$ionicView.enter', function(e) {
-//   //});
-  
-//   $scope.chats = Chats.all();
-//   $scope.remove = function(chat) {
-//     Chats.remove(chat);
-//   }
-// })
 
-// .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-//   $scope.chat = Chats.get($stateParams.chatId);
-// })
-
-// .controller('AccountCtrl', function($scope) {
-//   $scope.settings = {
-//     enableFriends: true
-//   };
-// });
