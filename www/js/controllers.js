@@ -13,7 +13,7 @@ angular.module('mindKit.controllers', [])
   $scope.thoughtLogs = ThoughtLog.query();
 
   // form data for creating new thought log with ng-model
-  $scope.thoughtLog = {situation: "", emotion1: "", emotion2: "", emotion3: "", emotion4: "", emotion5: ""};
+  $scope.thoughtLog = {situation: "", emotion1: "", emotion2: "", emotion3: "", emotion4: "", emotion5: "", emotion1AmountA: "", emotion2AmountA: "", emotion3AmountA: "", emotion4AmountA: "", emotion5AmountA: "", thought: "", altThought: ""};
   $scope.createLog = function() {
     console.log($scope.thoughtLog);
     $http.post('http://localhost:3000/logs', $scope.thoughtLog).
