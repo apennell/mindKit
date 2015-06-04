@@ -1,121 +1,188 @@
-<ion-content>
-  <div class="bar bar-header title-head">
-    <a class="button icon-left ion-arrow-left-c button-clear" ui-sref="progress">&nbsp; Back</a>
-    <div class="h1 title">Thought Log</div>
-  </div>
-  <div class="spacer" style="height: 40px;"></div>
-  
-  <form ng-submit="createLog()">
-    <div class="row">
-      <div class="col col-center">
-        <div class="list rounded">
-          
-          <!-- situation -->
-          <center><h3>What was the situation?</h3></center>
-          <div class="list list-inset">
-            <label class="item item-input">
-              <textarea ng-model="thoughtLog.situation" rows="20" placeholder="What happened? Where was I? Who was I with?"></textarea>
-            </label>
-          </div>
-          
-          <!-- emotions -->
-          <center>
-            <h3>How did I feel?</h3>
-            <p>
-              <b>What emotions did I feel? <br> How intense were they?</b><br>
-              Add up to 5 emotions and indicate how strong they were, from 1 - 100%.
-            </p>
-          </center>
+<ion-view>
+  <ion-content>
+           <form ng-submit="createLog()">
+    <ion-slide-box ion-wizard class="ion-wizard">
+    
+      <!-- <form ng-submit="createLog()"> -->
 
-          <!-- list of emotions -->
-          <ion-list>
-            <!-- emotion 1 -->
+        <!-- First question - situation -->
+        <ion-slide ion-wizard-step>
+          <div class="bar bar-header title-head">
+            <a class="button icon-left ion-arrow-left-c button-clear" ui-sref="progress">&nbsp; Back</a>
+            <div class="h1 title">Thought Log</div>
+          </div>
+          <div class="spacer" style="height: 40px;"></div>
+   
             <div class="row">
-              <div class="col">  
-                <label class="item item-input">
-                  <input ng-model="thoughtLog.emotion1" type="text" placeholder="Emotion">
-                </label>
-              </div>
-              <div class="col col-33">
-                <label class="item item-input">
-                  <input ng-model="thoughtLog.emotion1AmountA" type="text" placeholder="1-100">%&nbsp; &nbsp; &nbsp;
-                </label>
+              <div class="col col-center">
+                <div class="list rounded">
+                  <center><h4>What was the situation?</h4></center>
+                  <div class="list list-inset">
+                    <label class="item item-input">
+                      <textarea ng-model="thoughtLog.situation" rows="20" placeholder="What happened? Where was I? Who was I with?"></textarea>
+                    </label>
+                  </div>
+                  <button class="button button-block button-yolk" ion-wizard-next>
+                    Next &nbsp; <i class="icon ion-arrow-right-c"></i>
+                  </button>               
+                </div>
               </div>
             </div>
-            <!-- emotion 2 -->
+  <!--         </form> -->
+          <div class="spacer" style="height: 40px;"></div>
+        </ion-slide>
+        
+        <!-- Second question - Emotions/feelings -->
+        <ion-slide ion-wizard-step>
+          <div class="bar bar-header title-head">
+            <button class="button button-clear no-animation button-light" ion-wizard-previous><i class="icon ion-arrow-left-c cream"></i>&nbsp;Previous</button>
+            <div class="h1 title">Thought Log</div>
+          </div>
+          <div class="spacer" style="height: 40px;"></div>
+<!--           <form ng-submit="createLog()"> -->
             <div class="row">
-              <div class="col">  
-                <label class="item item-input">
-                  <input ng-model="thoughtLog.emotion2" type="text" placeholder="Emotion">
-                </label>
-              </div>
-              <div class="col col-33">
-                <label class="item item-input">
-                  <input ng-model="thoughtLog.emotion2AmountA" type="text" placeholder="1-100">%&nbsp; &nbsp; &nbsp;
-                </label> 
+              <div class="col col-center">
+                <div class="list rounded">
+                  <center>
+                    <h4>How did I feel?</h4>
+                    <p class="cream">
+                      <b>What emotions did I feel? <br> How intense were they?</b><br>
+                      Add up to 5 emotions and indicate how strong they were, from 1 - 100%.
+                    </p>
+                  </center>
+
+                  <!-- list of emotions -->
+                  <ion-list>
+                    <!-- emotion 1 -->
+                    <div class="row">
+                      <div class="col">  
+                        <label class="item item-input">
+                          <input ng-model="thoughtLog.emotion1" type="text" placeholder="Emotion">
+                        </label>
+                      </div>
+                      <div class="col col-33">
+                        <label class="item item-input">
+                          <input ng-model="thoughtLog.emotion1AmountA" type="text" placeholder="1-100">%&nbsp; &nbsp; &nbsp;
+                        </label>
+                      </div>
+                    </div>
+                    <!-- emotion 2 -->
+                    <div class="row">
+                      <div class="col">  
+                        <label class="item item-input">
+                          <input ng-model="thoughtLog.emotion2" type="text" placeholder="Emotion">
+                        </label>
+                      </div>
+                      <div class="col col-33">
+                        <label class="item item-input">
+                          <input ng-model="thoughtLog.emotion2AmountA" type="text" placeholder="1-100">%&nbsp; &nbsp; &nbsp;
+                        </label>
+                      </div>
+                    </div>
+                    <!-- emotion 3 -->
+                    <div class="row">
+                      <div class="col">  
+                        <label class="item item-input">
+                          <input ng-model="thoughtLog.emotion3" type="text" placeholder="Emotion">
+                        </label>
+                      </div>
+                      <div class="col col-33">
+                        <label class="item item-input">
+                          <input ng-model="thoughtLog.emotion3AmountA" type="text" placeholder="1-100">%&nbsp; &nbsp; &nbsp;
+                        </label>
+                      </div>
+                    </div>
+                    <!-- emotion 4 -->
+                    <div class="row">
+                      <div class="col">  
+                        <label class="item item-input">
+                          <input ng-model="thoughtLog.emotion4" type="text" placeholder="Emotion">
+                        </label>
+                      </div>
+                      <div class="col col-33">
+                        <label class="item item-input">
+                          <input ng-model="thoughtLog.emotion4AmountA" type="text" placeholder="1-100">%&nbsp; &nbsp; &nbsp;
+                        </label>
+                      </div>
+                    </div>
+                    <!-- emotion 5 -->
+                    <div class="row">
+                      <div class="col">  
+                        <label class="item item-input">
+                          <input ng-model="thoughtLog.emotion5" type="text" placeholder="Emotion">
+                        </label>
+                      </div>
+                      <div class="col col-33">
+                        <label class="item item-input">
+                          <input ng-model="thoughtLog.emotion5AmountA" type="text" placeholder="1-100">%&nbsp; &nbsp; &nbsp;
+                        </label>
+                      </div>
+                    </div>
+                  </ion-list> 
+                  <button class="button button-block button-yolk" ion-wizard-next>
+                    Next &nbsp; <i class="icon ion-arrow-right-c"></i>
+                  </button>
+                </div>
               </div>
             </div>
-            <!-- emotion 3 -->
+  <!--         </form> -->
+          <div class="spacer" style="height: 40px;"></div>
+        </ion-slide>
+
+        <!-- Third question - ANT thoughts -->
+        <ion-slide ion-wizard-step>
+          <div class="bar bar-header title-head">
+            <button class="button button-clear no-animation button-light" ion-wizard-previous><i class="icon ion-arrow-left-c cream"></i>&nbsp;Previous</button>
+            <div class="h1 title">Thought Log</div>
+          </div>
+          <div class="spacer" style="height: 40px;"></div>
+    <!--       <form ng-submit="createLog()"> -->
             <div class="row">
-              <div class="col">  
-                <label class="item item-input">
-                  <input ng-model="thoughtLog.emotion3" type="text" placeholder="Emotion">
-                </label>
-              </div>
-              <div class="col col-33">
-                <label class="item item-input">
-                  <input ng-model="thoughtLog.emotion3AmountA" type="text" placeholder="1-100">%&nbsp; &nbsp; &nbsp;
-                </label>
+              <div class="col col-center">
+                <div class="list rounded">
+                  <center><h4>What were my thoughts?</h4></center>
+                  <div class="list list-inset">
+                    <label class="item item-input">
+                      <textarea ng-model="thoughtLog.thought" rows="20" placeholder="What automatic negative thoughts did I have?"></textarea>
+                    </label>
+                  </div>
+                  <button class="button button-block button-yolk" ion-wizard-next>
+                    Next &nbsp; <i class="icon ion-arrow-right-c"></i>
+                  </button>
+                </div>
               </div>
             </div>
-            <!-- emotion 4 -->
+<!--           </form> -->
+        </ion-slide>
+
+        <!-- Fourth question - Alternative thoughts -->
+        <ion-slide ion-wizard-step>
+          <div class="bar bar-header title-head">
+            <button class="button button-clear no-animation button-light" ion-wizard-previous><i class="icon ion-arrow-left-c cream"></i>&nbsp;Previous</button>
+            <div class="h1 title">Thought Log</div>
+          </div>
+          <div class="spacer" style="height: 40px;"></div>
+          <!-- <form ng-submit="createLog()"> -->
             <div class="row">
-              <div class="col">  
-                <label class="item item-input">
-                  <input ng-model="thoughtLog.emotion4" type="text" placeholder="Emotion">
-                </label>
-              </div>
-              <div class="col col-33">
-                <label class="item item-input">
-                  <input ng-model="thoughtLog.emotion4AmountA" type="text" placeholder="1-100">%&nbsp; &nbsp; &nbsp;
-                </label>
+              <div class="col col-center">
+                <div class="list rounded">
+                  <center><h4>Alternative Thoughts</h4></center>
+                  <div class="list list-inset">
+                    <label class="item item-input">
+                      <textarea ng-model="thoughtLog.altThought" rows="20" placeholder="What's a more realistic thought? What would someone else say? Is there another way of seeing it?"></textarea>
+                    </label>
+                  </div>
+                  <!-- submit/add log button -->
+                  <button type="submit" class="button button-block button-yolk">Add Log</button>
+                </div>
               </div>
             </div>
-            <!-- emotion 5 -->
-            <div class="row">
-              <div class="col">  
-                <label class="item item-input">
-                  <input ng-model="thoughtLog.emotion5" type="text" placeholder="Emotion">
-                </label>
-              </div>
-              <div class="col col-33">
-                <label class="item item-input">
-                  <input ng-model="thoughtLog.emotion5AmountA" type="text" placeholder="1-100">%&nbsp; &nbsp; &nbsp;
-                </label>
-              </div>
-            </div>
-          </ion-list>
           
-          <!-- ANT thoughts -->
-          <center><h3>What were my thoughts?</h3></center>
-          <div class="list list-inset">
-            <label class="item item-input">
-              <textarea ng-model="thoughtLog.thought" rows="20" placeholder="What automatic negative thoughts did I have?"></textarea>
-            </label>
-          </div>
+          <div class="spacer" style="height: 25px;"></div>
+        </ion-slide>
 
-          <!-- Alternative thoughts -->
-          <center><h3>Alternative Thoughts</h3></center>
-          <div class="list list-inset">
-            <label class="item item-input">
-              <textarea ng-model="thoughtLog.altThought" rows="20" placeholder="What's a more realistic thought? What would someone else say? Is there another way of seeing it?"></textarea>
-            </label>
-          </div>
-
-          <!-- submit/add log button -->
-          <button type="submit" class="button button-block button-yolk">Add Log</button>
-        </div>
-      </div>
-    </div>
-  </form>
-</ion-content>
+      <!-- </form> -->
+    </ion-slide-box>
+    </form>
+  </ion-content>
+</ion-view>
