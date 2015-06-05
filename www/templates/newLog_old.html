@@ -21,7 +21,6 @@
     </ion-nav-buttons> -->
 
     <ion-slide-box ion-wizard class="ion-wizard">
-      <form ng-submit="createLog()">
 
       <!-- First question - situation -->
       <ion-slide ion-wizard-step>
@@ -294,14 +293,12 @@
                   </label>
                 </div>
               </ion-list>
-              <button type="submit" class="button button-block button-yolk">Add Log</button>        
+              <a class="button button-block button-yolk" ui-sref="showLog">Submit</a>
             </div>
           </div>
         </div>
         <div class="spacer" style="height: 25px;"></div>
-      
-        </form>
       </ion-slide>
-<!--     </ion-slide-box> -->
+
   </ion-content>
 </ion-view>
